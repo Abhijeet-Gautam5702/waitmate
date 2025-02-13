@@ -1,0 +1,29 @@
+{
+  "name": "waitmate-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.ts",
+    "build":"tsc",
+    "start": "node dist/index.js",
+    "start:prod": "node dist/index.js"
+  },
+  "keywords": [
+    "waitlist",
+    "email",
+    "signup",
+    "email analytics",
+    "saas"
+  ],
+  "author": "Abhijeet Gautam",
+  "license": "MIT",
+  "description": "A Simple Email Collection Platform for SaaS Developer",
+  "dependencies": {
+    "@types/node": "^22.13.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}
