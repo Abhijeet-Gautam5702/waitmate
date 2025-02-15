@@ -1,9 +1,4 @@
-interface IApiResponse {
-  readonly statusCode: number;
-  readonly message: string;
-  readonly data: unknown;
-  readonly success: boolean;
-}
+import { IApiResponse } from "../interfaces/common.interface";
 
 class ApiResponse implements IApiResponse {
   readonly statusCode: number;

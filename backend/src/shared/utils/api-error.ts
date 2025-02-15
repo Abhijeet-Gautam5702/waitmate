@@ -1,9 +1,4 @@
-interface IApiError {
-  readonly statusCode: number;
-  readonly message: string;
-  readonly success: boolean;
-  readonly errors?: unknown;
-}
+import { IApiError } from "../interfaces/common.interface";
 
 class ApiError extends Error implements IApiError {
   readonly statusCode: number;
