@@ -20,7 +20,7 @@ const userAccountDetailsSchema = new Schema(
 // User schema
 const userSchema = new Schema<IUserDocument>(
   {
-    _id: {
+    userId: {
       type: String,
       required: true,
       unique: true,
@@ -65,11 +65,12 @@ const userSchema = new Schema<IUserDocument>(
   {
     timestamps: true,
     versionKey: false,
+    id: false,
   }
 );
 
 // Indexes
-userSchema.index({ email: 1 }, { unique: true });
+// userSchema.index({ email: 1 }, { unique: true });
 userSchema.index({ authProvider: 1, authProviderId: 1 }, { unique: true });
 
 const UserModel = model<IUserDocument>("User", userSchema);

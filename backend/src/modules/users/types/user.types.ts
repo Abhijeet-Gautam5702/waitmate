@@ -20,7 +20,7 @@ export type SubMerchantAccountStatus =
 
 // Base user interface without mongoose methods
 export interface IUser {
-  _id: string; // Appwrite generated user ID
+  userId: string; // Appwrite generated user ID
   email: string;
   name: string;
   password: string;

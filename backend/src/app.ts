@@ -11,8 +11,10 @@ app.use(
   })
 );
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("Hello World!!!");
-});
+app.use(express.json());
+
+import userRouter from "./modules/users/routes/user.routes";
+
+app.use("/api/v1/user", userRouter);
 
 export default app;
